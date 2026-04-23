@@ -11,7 +11,6 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
         body {
             background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
             min-height: 100vh;
@@ -21,7 +20,6 @@
             color: white;
             padding: 20px;
         }
-
         /* Glassmorphism Card */
         .glass-card {
             background: rgba(255, 255, 255, 0.05);
@@ -36,48 +34,54 @@
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
             animation: fadeIn 1.5s ease-in-out;
         }
-
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-
         h1 {
-            font-size: 1.5rem; /* Reduced font size to fit on one line */
+            font-size: 1.5rem;
+            /* Reduced font size to fit on one line */
             margin-bottom: 10px;
             letter-spacing: 1px;
-            white-space: nowrap; /* Forces text to stay on one line */
-            overflow: hidden; /* Important for preventing unwanted scrollbars */
-            text-overflow: ellipsis; /* Adds dots if text still exceeds container width */
+            white-space: nowrap;
+            /* Forces text to to to to to to to to to to to text stay on one line */
+            overflow: hidden;
+            /* Important for preventing unwanted scrollbars */
+            text-overflow: ellipsis;
+            /* Adds dots if text still exceeds container width */
         }
-
         .subtitle {
             color: #00d2ff;
             font-weight: bold;
             margin-bottom: 20px;
             display: block;
         }
-
         p {
             font-size: 0.95rem;
             line-height: 1.6;
             color: #e0e0e0;
             margin-bottom: 30px;
-            text-align: center; /* Center aligning the text in p tag */
+            text-align: center;
+            /* Center aligning the text in p tag */
         }
-
         .social-links {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 15px;
-            justify-items: center; /* Center items horizontally within grid cells */
+            justify-items: center;
+            /* Center items horizontally within grid cells */
         }
-
         .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 10px;
+            padding: 15px;
             text-decoration: none;
             color: white;
             background: rgba(255, 255, 255, 0.1);
@@ -85,67 +89,82 @@
             border-radius: 12px;
             font-size: 0.9rem;
             transition: 0.3s all ease;
-            width: 100%; /* Ensures buttons fill their grid cells */
+            width: 100%;
+            /* Ensures buttons fill their grid cells */
+            height: 50px;
         }
-
         .btn:hover {
             background: rgba(255, 255, 255, 0.2);
             transform: scale(1.05);
             box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
         }
-
         .btn img {
             width: 20px;
             margin-right: 10px;
         }
-
         /* Website button full width */
         .btn-full {
             grid-column: span 2;
             background: linear-gradient(90deg, #00d2ff, #3a7bd5);
             font-weight: bold;
+            height: 50px; /* Added height to match other buttons */
         }
-
+        .btn-sc {
+            grid-column: span 2;
+            background: rgba(255, 255, 255, 0.1);
+            height: 50px; /* Added height to match other buttons */
+        }
         /* Responsive */
-        @media (max-width: 480px) { /* Adjust media query breakpoint for better responsiveness */
-            h1 { font-size: 1.2rem; } /* Slightly smaller h1 on smaller screens */
-            .social-links { grid-template-columns: 1fr; }
-            .btn-full { grid-column: span 1; }
+        @media (max-width: 480px) {
+            /* Adjust media query breakpoint for better responsiveness */
+            h1 {
+                font-size: 1.2rem;
+            }
+            /* Slightly smaller h1 on smaller screens */
+            .social-links {
+                grid-template-columns: 1fr;
+            }
+            .btn-full {
+                grid-column: span 1;
+            }
+            .btn-sc {
+                grid-column: span 1;
+            }
+            }
+            
         }
     </style>
 </head>
 <body>
-
     <div class="glass-card">
         <h1>🦋⃟ᴠͥɪͣᴘͫ•𝐒𝐑𝟕 𝐌𝐨𝐝𝐬</h1>
-        <span class="subtitle">Creative Developer & Modder</span>
-        
-        <p>Welcome to my creative space. I specialize in Android modifications and modern web development. 
-
-Explore my latest projects, tools, and premium mods below. Feel free to Contact and Don't forget to follow on Socials.
+        <span class="subtitle">Android Developer & Modder</span>
+        <p>
+            Welcome to my official world! I'm a Android Reverse Engineer and a Modder. I'm interested in Android Modification, Android App Development, Ethical Hacking and Web Development. I'm active in those Social Media Sites below. Don't hesitate to contact me if you need any modded application, help, support or any report about my modded application. I'll be there for you. So, stay connected for Premium Updates!.<br>Allah Hafez! Assalamu Alaikum!
         </p>
-
         <div class="social-links">
-            <a href="https://t.me/sr7mods" class="btn" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="TG"> Telegram
-            </a>
-            <a href="https://wa.me/8801318930997" class="btn" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WA"> WhatsApp
-            </a>
-            <a href="https://github.com/alexsifatrayhan" class="btn" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GH"> GitHub
-            </a>
-            <a href="https://youtube.com/@mrsreditz2007" class="btn" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YT"> YouTube
-            </a>
-            <a href="https://m.facebook.com/sifatrayhan2007" class="btn" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="FB"> Facebook
-            </a>
-            <a href="https://alexsifatrayhan.github.io/sr7mods-app-store/" class="btn btn-full" target="_blank">
-                🌐 Visit My App Store
-            </a>
-        </div>
+    <a href="https://t.me/sr7mods" class="btn" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="TG"> Telegram
+    </a>
+    <a href="https://wa.me/8801318930997" class="btn" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WA"> WhatsApp
+    </a>
+    <a href="https://github.com/alexsifatrayhan" class="btn" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GH"> GitHub
+    </a>
+    <a href="https://youtube.com/@mrsreditz2007" class="btn" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YT"> YouTube
+    </a>
+    <a href="https://m.facebook.com/sifatrayhan2007" class="btn" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="FB"> Facebook
+    </a>
+    <a href="mailto:mrsrff12@gmail.com" class="btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"> Email
+    </a>
+    
+    <a href="https://alexsifatrayhan.github.io/sr7mods-app-store/" class="btn btn-full" target="_blank">
+        🌐 Visit My App Store
+    </a>
     </div>
-
 </body>
 </html>
