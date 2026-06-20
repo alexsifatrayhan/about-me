@@ -27,34 +27,34 @@
             -webkit-backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
-            padding: 40px;
-            width: 90%;
-            max-width: 500px;
+            padding: 30px; /* Reduced slightly for better mobile fit */
+            width: 100%;
+            max-width: 450px;
             text-align: center;
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
             animation: fadeIn 1.5s ease-in-out;
+            overflow: hidden; /* Keeps everything inside the rounded corners */
         }
+
+        /* --- ADDED IMAGE FIX HERE --- */
+        .glass-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         h1 {
             font-size: 1.5rem;
-            /* Reduced font size to fit on one line */
             margin-bottom: 10px;
             letter-spacing: 1px;
-            white-space: nowrap;
-            /* Forces text to to to to to to to to to to to text stay on one line */
-            overflow: hidden;
-            /* Important for preventing unwanted scrollbars */
-            text-overflow: ellipsis;
-            /* Adds dots if text still exceeds container width */
         }
         .subtitle {
             color: #00d2ff;
@@ -66,105 +66,90 @@
             font-size: 0.95rem;
             line-height: 1.6;
             color: #e0e0e0;
-            margin-bottom: 30px;
-            text-align: center;
-            /* Center aligning the text in p tag */
+            margin-bottom: 25px;
         }
         .social-links {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            justify-items: center;
-            /* Center items horizontally within grid cells */
+            gap: 12px;
         }
         .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 15px;
+            padding: 10px;
             text-decoration: none;
             color: white;
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 12px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             transition: 0.3s all ease;
-            width: 100%;
-            /* Ensures buttons fill their grid cells */
-            height: 50px;
+            height: 45px;
         }
         .btn:hover {
             background: rgba(255, 255, 255, 0.2);
-            transform: scale(1.05);
+            transform: scale(1.02);
             box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
         }
-        .btn img {
-            width: 20px;
-            margin-right: 10px;
+        .btn svg {
+            width: 18px;
+            height: 18px;
+            margin-right: 8px;
         }
-        /* Website button full width */
         .btn-full {
             grid-column: span 2;
             background: linear-gradient(90deg, #00d2ff, #3a7bd5);
             font-weight: bold;
-            height: 50px; /* Added height to match other buttons */
         }
-        .btn-sc {
-            grid-column: span 2;
-            background: rgba(255, 255, 255, 0.1);
-            height: 50px; /* Added height to match other buttons */
-        }
-        /* Responsive */
         @media (max-width: 480px) {
-            /* Adjust media query breakpoint for better responsiveness */
-            h1 {
-                font-size: 1.2rem;
-            }
-            /* Slightly smaller h1 on smaller screens */
-            .social-links {
-                grid-template-columns: 1fr;
-            }
-            .btn-full {
-                grid-column: span 1;
-            }
-            .btn-sc {
-                grid-column: span 1;
-            }
-            }
-            
+            .social-links { grid-template-columns: 1fr; }
+            .btn-full { grid-column: span 1; }
         }
     </style>
 </head>
 <body>
     <div class="glass-card">
-        <h1>🦋⃟ᴠͥɪͣᴘͫ•𝐒𝐑𝟕 𝐌𝐨𝐝𝐬</h1>
-        <span class="subtitle">Android Developer & Modder</span>
+        <img src="mypic.png" alt="SR7 Mods Profile">
         <p>
-            Welcome to my official world! I'm a Android Reverse Engineer and a Modder. I'm interested in Android Modification, Android App Development, Ethical Hacking and Web Development. I'm active in those Social Media Sites below. Don't hesitate to contact me if you need any modded application, help, support or any report about my modded application. I'll be there for you. So, stay connected for Premium Updates!.<br>Allah Hafez! Assalamu Alaikum!
+           Assalamu Alaikum!<br>Hey, this is 𝐒𝐑𝟕 𝐌𝐨𝐝𝐬. I'm interested in Android Reverse Engineering, App Modification, Web Designing, Android App Development etc. Connect on Socials if you want to Discuss something.
         </p>
+        
         <div class="social-links">
-    <a href="https://t.me/sr7mods" class="btn" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="TG"> Telegram
-    </a>
-    <a href="https://wa.me/8801318930997" class="btn" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WA"> WhatsApp
-    </a>
-    <a href="https://github.com/alexsifatrayhan" class="btn" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GH"> GitHub
-    </a>
-    <a href="https://youtube.com/@mrsreditz2007" class="btn" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YT"> YouTube
-    </a>
-    <a href="https://m.facebook.com/sifatrayhan2007" class="btn" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="FB"> Facebook
-    </a>
-    <a href="mailto:mrsrff12@gmail.com" class="btn">
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"> Email
-    </a>
-    
-    <a href="https://alexsifatrayhan.github.io/sr7mods-app-store/" class="btn btn-full" target="_blank">
-        🌐 Visit My App Store
-    </a>
+            <a href="https://t.me/sr7mods" class="btn" target="_blank">
+                <svg viewBox="0 0 24 24" fill="#26A5E4"><path d="M11.944 0C5.346 0 0 5.346 0 11.944c0 6.598 5.346 11.944 11.944 11.944 6.598 0 11.944-5.346 11.944-11.944C23.888 5.346 18.542 0 11.944 0zm5.833 8.333l-2.01 9.479c-.15.67-.549.833-1.114.514l-3.072-2.264-1.482 1.425c-.164.164-.302.302-.62.302l.221-3.131 5.698-5.148c.248-.22-.054-.343-.38-.127L7.962 14.16l-3.037-.949c-.66-.206-.673-.66.138-.976l11.87-4.573c.549-.2.1.333.1.333z"/></svg>
+                Telegram
+            </a>
+
+            <a href="https://wa.me/8801318930997" class="btn" target="_blank">
+                <svg viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+            </a>
+
+            <a href="https://github.com/alexsifatrayhan" class="btn" target="_blank">
+                <svg viewBox="0 0 24 24" fill="#FFFFFF"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                GitHub
+            </a>
+
+            <a href="https://youtube.com/@mrsreditz2007" class="btn" target="_blank">
+                <svg viewBox="0 0 24 24" fill="#FF0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                YouTube
+            </a>
+
+            <a href="https://m.facebook.com/sifatrayhan2007" class="btn" target="_blank">
+                <svg viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Facebook
+            </a>
+
+            <a href="mailto:mrsrff12@gmail.com" class="btn">
+                <svg viewBox="0 0 24 24" fill="#EA4335"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.573l8.073-6.08c1.618-1.214 3.927-.059 3.927 1.964z"/></svg>
+                Email
+            </a>
+            
+            <a href="https://alexsifatrayhan.github.io/sr7mods-app-store/" class="btn btn-full" target="_blank">
+                🌐 Visit My App Store
+            </a>
+        </div>
     </div>
 </body>
 </html>
