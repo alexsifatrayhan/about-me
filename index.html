@@ -27,24 +27,32 @@
             -webkit-backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
-            padding: 30px; /* Reduced slightly for better mobile fit */
+            padding: 30px;
             width: 100%;
             max-width: 450px;
             text-align: center;
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
             animation: fadeIn 1.5s ease-in-out;
-            overflow: hidden; /* Keeps everything inside the rounded corners */
+            overflow: hidden;
         }
 
-        /* --- ADDED IMAGE FIX HERE --- */
+        /* --- PERFECT ROUND IMAGE FIX --- */
         .glass-card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 15px;
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid rgba(0, 210, 255, 0.6);
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
             margin-bottom: 20px;
             display: block;
             margin-left: auto;
             margin-right: auto;
+            transition: 0.3s transform ease;
+        }
+
+        .glass-card img:hover {
+            transform: scale(1.05) rotate(3deg);
         }
 
         @keyframes fadeIn {
@@ -117,7 +125,7 @@
         
         <div class="social-links">
             <a href="https://t.me/sr7mods" class="btn" target="_blank">
-                <svg viewBox="0 0 24 24" fill="#26A5E4"><path d="M11.944 0C5.346 0 0 5.346 0 11.944c0 6.598 5.346 11.944 11.944 11.944 6.598 0 11.944-5.346 11.944-11.944C23.888 5.346 18.542 0 11.944 0zm5.833 8.333l-2.01 9.479c-.15.67-.549.833-1.114.514l-3.072-2.264-1.482 1.425c-.164.164-.302.302-.62.302l.221-3.131 5.698-5.148c.248-.22-.054-.343-.38-.127L7.962 14.16l-3.037-.949c-.66-.206-.673-.66.138-.976l11.87-4.573c.549-.2.1.333.1.333z"/></svg>
+                <svg viewBox="0 0 24 24" fill="#26A5E4"><path d="M11.944 0C5.346 0 0 5.346 0 11.944c0 6.598 5.346 11.944 11.944 11.944 6.598 0 11.944-5.346 11.944-11.944C23.888 5.346 18.542 0 11.944 0zm5.833 8.333l-2.01 9.479c-.15.67-.549.833-1.114.514l-3.072-2.264-1.482 1.425c-.164.164-.302.302-.62.302l.221-3.131 5.698-5.148c.248-.22-.054-.343-.38-.127L7.962 14.16l-3.037-.949c-.66-.206-.673-.66.138-.976l11.87-4.573c.549-.2... .1.333.1.333z"/></svg>
                 Telegram
             </a>
 
